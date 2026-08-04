@@ -8,9 +8,9 @@ class APIHandler(http.server.BaseHTTPRequestHandler):
             self.send_header('Content-Type', 'application/json')
             self.end_headers()
             response = {
-                "nombre": "Alvaro Gabriel Ceballos Gil",
-                "cancion_favorita": "Pushing me Away"
-            }
+    "nombre": "Alvaro Gabriel Ceballos Gil",
+    "album_favorito": "Hybrid Theory"
+}
             self.wfile.write(json.dumps(response, ensure_ascii=False).encode('utf-8'))
         else:
             self.send_response(404)
